@@ -1,0 +1,18 @@
+{
+  "name": "chili-cli",
+  "version": "0.0.1",
+  "main": "index.js",
+  "bin": {
+    "chili": "index.js"
+  },
+  "repository": "git@github.com:xiamu14/chili-cli.git",
+  "author": "xiamu <544652471@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chili-cli": "./"
+  },
+  "devDependencies": {
+    "commander": "^2.20.0",
+    "inquirer": "^6.3.1"
+  }
+}
