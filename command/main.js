@@ -1,7 +1,7 @@
 const program = require("commander");
 const inquirer = require("inquirer");
-const pkg = require('../package.json');
-const init = require('../chili/init');
+const pkg = require("../package.json");
+const init = require("../chili/init");
 // step1 询问使用哪一类的核心处理器
 
 // 读取配置文件
@@ -12,20 +12,35 @@ program
   .alias("i")
   .description("generator chili api toolkits.")
   .arguments("<path>")
-  .action((path) => {
+  .action(path => {
     const promps = [];
     promps.push({
       type: "list",
-      name: "kernal",
-      message: "请选择 api 请求处理器？",
+      name: "environment",
+      message: "请选择项目环境？",
       choices: [
         {
-          name: "fetch compatible",
-          value: "fetch"
+          name: "浏览器",
+          value: "browser"
         },
         {
-          name: "wechat compatible",
-          value: "wechat"
+          name: "微信小程序",
+          value: "wx"
+        }
+      ]
+    });
+    promps.push({
+      type: "list",
+      name: "language",
+      message: "请选择项目语言？",
+      choices: [
+        {
+          name: "typescript",
+          value: "ts"
+        },
+        {
+          name: "javascript",
+          value: "js"
         }
       ]
     });
@@ -37,8 +52,6 @@ program
       // 执行具体函数
       init(answers, path);
     });
-  })
+  });
 
 program.parse(process.argv);
-
-

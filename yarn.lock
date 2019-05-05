@@ -38,10 +38,15 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chili-cli@./:
+"chili-cli@file:./":
   version "0.0.1"
   dependencies:
-    chili-cli "./"
+    chili-cli "file:../../../../../../Library/Caches/Yarn/v4/npm-chili-cli-0.0.1-b46ca355-168b-4897-8e1c-353635bdb9a7-1557043385730/node_modules/chili-cli"
+
+"chili-cli@file:./.":
+  version "0.0.1"
+  dependencies:
+    chili-cli "file:../../../../../../Library/Caches/Yarn/v4/npm-chili-cli-0.0.1-03391c22-69c6-482e-a65a-f15ed87563d3-1557043385702/node_modules/chili-cli"
 
 cli-cursor@^2.1.0:
   version "2.1.0"
